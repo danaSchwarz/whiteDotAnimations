@@ -1,0 +1,266 @@
+body {
+  margin: 0px;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
+#container1 {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+
+}
+
+#dot {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 2;
+  background-color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+#dot:hover {
+  cursor: pointer;
+}
+
+.dot-hover {
+  transition: all .5s ease;
+  width: 85px;
+  height: 85px;
+  border-width: 2px;
+}
+
+
+.leave-dot {
+  transition: all .5s ease;
+  width: 50px;
+  height: 50px;
+  border-width: 3px;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1;
+  background-color: transparent;
+  border-style: solid;
+  border-radius: 50%;
+  border-color: white;
+
+}
+
+.animation-expand {
+  animation-name: expand-size;
+  animation-duration: 2s;
+}
+
+
+@keyframes expand-size {
+  0% {
+    width: 85px;
+    height: 85px;
+    border-width: 2px;
+  }
+
+  100% {
+    width: 550px;
+    height: 550px;
+    border-width: 1px;
+  }
+}
+
+.animation-reverse {
+  animation-name: reverse-size;
+  animation-duration: 2s;
+}
+
+@keyframes reverse-size {
+  0% {
+    width: 550px;
+    height: 550px;
+    border-width: 1px;
+  }
+
+  100% {
+    width: 85px;
+    height: 85px;
+    border-width: 2px;
+  }
+}
+
+
+.big-circle {
+  width: 550px;
+  height: 550px;
+  border-width: 1px;
+}
+
+#container2 {
+  background-color: transparent;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+}
+
+.card {
+  position: fixed;
+  padding: 10px;
+}
+
+.pic {
+  border-radius: 50%;
+  float: left;
+
+}
+
+#card1 {
+  left: 10vw;
+  top: 5vw;
+}
+
+#card2 {
+  right: 10vw;
+  top: 5vw;
+}
+
+#card3 {
+  left: 10vw;
+  bottom: 5vw;
+}
+
+#card4 {
+  right: 10vw;
+  bottom: 5vw;
+}
+
+.hide {
+  opacity: 45%;
+  transition: all .5s ease;
+}
+
+.show {
+  opacity: 100%;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+.closing {
+  opacity: 0%;
+  transition: all 2s ease;
+  visibility: hidden;
+}
+
+.opening {
+  opacity: 100%;
+  transition: all 2s ease;
+  visibility: visible;
+}
+
+.card-whole {
+  background-color: white;
+  color: black;
+  z-index: 3;
+  width: calc(70% - 0px);
+  height: calc(60% - 0px);
+  border-radius: 50px;
+  padding: 30px 50px;
+  overflow: scroll;
+}
+
+.card-text {
+  padding: 10px;
+  text-align: right;
+}
+
+.card-text-hidden {
+  content-visibility: hidden;
+}
+
+.card-text-visible {
+  content-visibility: visible;
+}
+
+.pic-size-small {
+  max-height: 15vw;
+}
+
+.pic-size-big {
+  height: 100%;
+}
+
+.pro-link {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+  color: black;
+  border-style: outset;
+  border-color: black;
+  border-width: 2px;
+}
+
+.pro-link:hover {
+  box-shadow: 0 4px 8px 0 rgba(255, 165, 0, 0.2), 0 6px 20px 0 rgba(255, 165, 0, 0.19);
+}
+
+
+
+.card-text-title {
+  text-align: center;
+}
+
+
+.colorful {
+  animation-name: colorful;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorful {
+  0% {
+    background-color: #FF00FF;
+  }
+
+  33% {
+    background-color: #00FFFF;
+  }
+
+  66% {
+    background-color: #FFFF00;
+  }
+
+  100% {
+    background-color: #FF00FF;
+  }
+}
+
+.color-switch {
+  animation-name: color-switch;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes color-switch {
+  0% {
+    background-color: white;
+  }
+
+  80% {
+    background-color: white;
+  }
+
+  90% {
+    background-color: orange;
+  }
+
+  100% {
+    background-color: white;
+  }
+}

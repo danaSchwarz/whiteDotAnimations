@@ -1,0 +1,128 @@
+body {
+  margin: 0px;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
+#pro-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+}
+
+.shape-container {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.shape {
+  height: 80px;
+  width: 80px;
+  background-color: white;
+  border-style: solid;
+  border-radius: 50%;
+
+}
+
+.shape:hover {
+  cursor: pointer;
+}
+
+#shape1 {
+  rotate: 0deg;
+}
+
+#shape2 {
+
+  rotate: 60deg;
+}
+
+#shape3 {
+
+  rotate: 120deg;
+}
+
+#shape1-con {
+  z-index: 3;
+}
+
+#shape2-con {
+  z-index: 2;
+}
+
+#shape3-con {
+  z-index: 1;
+}
+
+.rotation1 {
+  animation-name: rotation-animation1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+.rotation2 {
+  animation-name: rotation-animation2;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+.rotation3 {
+  animation-name: rotation-animation3;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+@keyframes rotation-animation1 {
+  0% {
+    rotate: 0 deg;
+
+  }
+
+  50% {
+    rotate: 180deg;
+    height: 250px;
+    width: 40px;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes rotation-animation2 {
+  0% {
+    rotate: 60 deg;
+  }
+
+  50% {
+    rotate: 240deg;
+    height: 250px;
+    width: 40px;
+
+  }
+
+  100% {
+    rotate: 420deg;
+  }
+}
+
+@keyframes rotation-animation3 {
+  0% {
+    rotate: 120 deg;
+  }
+
+  50% {
+    rotate: 300deg;
+    height: 250px;
+    width: 40px;
+
+  }
+
+  100% {
+    rotate: 480deg;
+  }
+}

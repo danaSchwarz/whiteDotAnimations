@@ -1,0 +1,82 @@
+body {
+  margin: 0px;
+  background-color: black;
+  color: white;
+
+}
+
+.container {
+  width: 100vw;
+  position: fixed;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.eye-box {
+  width: 200px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.eye-box:hover {
+  cursor: pointer;
+}
+
+#white {
+  width: 200px;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
+}
+
+#brown {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: rgb(81, 32, 32);
+  z-index: 2;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+#black {
+  border-radius: 50%;
+  background-color: black;
+  z-index: 3;
+  align-self: center;
+}
+
+.eye-close {
+  transition: all 0.7s ease;
+  height: 0px;
+}
+
+.eye-open {
+  transition: all 3s ease;
+  height: 80px;
+}
+
+.iris-small {
+  transition: all 5s ease;
+  height: 30px;
+  width: 30px;
+}
+
+.iris-big {
+  transition: all 2s ease;
+  height: 60px;
+  width: 60px;
+}

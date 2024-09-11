@@ -1,0 +1,107 @@
+body {
+  margin: 0px;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
+#pro-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+}
+
+.shape-container {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.shape {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-style: solid;
+
+}
+
+.shape:hover {
+  cursor: pointer;
+}
+
+#shape1 {
+
+  rotate: 0deg;
+}
+
+#shape2 {
+
+  rotate: 30deg;
+}
+
+#shape3 {
+
+  rotate: 60deg;
+}
+
+#shape1-con {
+  z-index: 3;
+}
+
+#shape2-con {
+  z-index: 2;
+}
+
+#shape3-con {
+  z-index: 1;
+}
+
+.rotation1 {
+  animation-name: rotation-animation1;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+}
+
+.rotation2 {
+  animation-name: rotation-animation2;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+}
+
+.rotation3 {
+  animation-name: rotation-animation3;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes rotation-animation1 {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes rotation-animation2 {
+  from {
+    rotate: 30deg;
+  }
+
+  to {
+    rotate: 390deg;
+  }
+}
+
+@keyframes rotation-animation3 {
+  from {
+    rotate: 60deg;
+  }
+
+  to {
+    rotate: 420deg;
+  }
+}
